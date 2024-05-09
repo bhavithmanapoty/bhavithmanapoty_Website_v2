@@ -23,5 +23,13 @@ export const dialogueData = {
 }
 
 export const fullScreenDialogueData = {
-    "exp1": ["About Me", "I am Bhavith Manapoty, a Computer Science graduate from the University of Edinburgh. I am passionate about Artificial Intelligence and Game Development. I have experience in developing games using Unity and Godot. I have also worked on projects involving Machine Learning and Computer Vision. I am currently working on a project that involves developing a game using Godot and implementing a Machine Learning model to control the game."],
+    "exp1": ["Electronics Student Technician (Nov 2023 - Present)", "I worked as an Electronics Student Technician at the uCreate Makerspace in the Univrsity of Edinburgh. I was responsible for the maintenance and repair of the equipment in the makerspace. I also helped students with their electronics projects and taught them how to use various equipment. I also conducted workshops on soldering."],
+    "exp2": ["Teaching Support (Oct 2023 - Present)","This is some placeholder text for the second experience. I will update this later."],
+    "exp3": ["Research Assistant (Sept 2022 - May 2023)","This is some placeholder text for the second experience. I will update this later."],
+    "exp4": ["Remote Labs Project Intern (Jun 2022 - Aug 2022)","This is some placeholder text for the second experience. I will update this later."],
+    "exp5": ["Technical Developer (Jun 2021 - Feb 2022)","This is some placeholder text for the second experience. I will update this later."],
+    "exp6": ["Junior Software Developer (Jan 2021 - Oct 2021)","This is some placeholder text for the second experience. I will update this later."],
+    "exp7": ["Web Migration Intern (Jun 2021 - Aug 2021)",""],
+    "exp8": ["Embedded Systems Developer (Dec 2019 - Sept 2020)","This is some placeholder text for the second experience. I will update this later."],
+    "exp9": ["Technical Head (Jun 2019 - Sept 2020)","This is some placeholder text for the second experience. I will update this later."],
 }

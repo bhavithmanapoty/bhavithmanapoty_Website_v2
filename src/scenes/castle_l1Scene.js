@@ -60,10 +60,14 @@ export function castle_l1Scene(k) {
                                 }
                             });
                         }
-                        else if (boundary.name === "exp1"){
+                        else if (/^exp[1-9]$/.test(boundary.name)) {
                             player.onCollide(boundary.name, () => {
-                                player.isInDialogue = true;
-                                displayFullscreenDialogue(fullScreenDialogueData[boundary.name][0], fullScreenDialogueData[boundary.name][1], () => (player.isInDialogue = false));
+                              player.isInDialogue = true;
+                              displayFullscreenDialogue(
+                                fullScreenDialogueData[boundary.name][0],
+                                fullScreenDialogueData[boundary.name][1],
+                                () => (player.isInDialogue = false)
+                              );
                             });
                         }
                         else if (boundary.name !== "wall"){
