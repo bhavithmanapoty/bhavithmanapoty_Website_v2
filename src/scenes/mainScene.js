@@ -47,10 +47,8 @@ export function mainScene(k) {
                             player.onCollide(boundary.name, () => {
                                 player.isInDialogue = true;
                                 displayDialogue(dialogueData[boundary.name], () => (player.isInDialogue = false))
-        
                             });
                         }
-    
                     }
                 }
                 continue;   

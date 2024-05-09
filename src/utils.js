@@ -25,6 +25,7 @@ export function displayDialogue(text, onDialogueEnd) {
         dialogue.innerHTML = '';
         clearInterval(intervalRef);
         closeBtn.removeEventListener('click', onCloseBtnClick);
+        document.getElementById("game").focus();
     }
 
     closeBtn.addEventListener('click', onCloseBtnClick);

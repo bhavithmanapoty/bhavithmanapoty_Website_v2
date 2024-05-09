@@ -9,14 +9,20 @@
     "fileStates": {
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json": {
             "scale": 2,
-            "selectedLayer": 0,
+            "selectedLayer": 11,
             "viewCenter": {
-                "x": 157.25,
+                "x": 172.25,
                 "y": 165.25
             }
         },
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json#Inner": {
+            "scaleInDock": 5.5
+        },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json#Overworld": {
-            "scaleInDock": 3
+            "scaleInDock": 4
+        },
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json#character": {
+            "scaleInDock": 4
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json#spritesheet": {
             "scaleInDock": 2
