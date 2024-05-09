@@ -1,19 +1,19 @@
 import { dialogueData, scaleFactor } from "../constants";
 import { displayDialogue, setCamScale } from "../utils";
 
-export function mainScene(k) {
-    k.scene("main", async () => {
-        const mapData = await (await fetch("./map.json")).json();
-        const layers = mapData.layers;
-    
-        const map = k.add([
-            k.sprite("map"),
+export function homeScene(k) {
+    k.scene("home", async () => {
+        const homeData = await (await fetch("./home.json")).json();
+        const layers = homeData.layers;
+
+        const home = k.add([
+            k.sprite("home"),
             k.pos(0),
             k.scale(scaleFactor),
         ]);
-    
+
         const player = k.make([
-            k.sprite("character", {anim: "idle-down"}),
+            k.sprite("character", {anim: "idle-up"}),
             k.area({
                 shape: new k.Rect(k.vec2(0, 0), 10, 15),
             }),
@@ -28,11 +28,11 @@ export function mainScene(k) {
             },
             "player",
         ]);
-    
+
         for (const layer of layers) {
             if (layer.name === "boundaries"){
                 for (const boundary of layer.objects){
-                    map.add([
+                    home.add([
                         k.area({
                             shape: new k.Rect(k.vec2(0), boundary.width, boundary.height),
                         }),
@@ -40,22 +40,13 @@ export function mainScene(k) {
                         k.pos(boundary.x, boundary.y),
                         boundary.name,
                     ]);
-    
+
                     if (boundary.name){
-                        if (boundary.name === "enter-home"){
+                        if (boundary.name === "enter-map"){
                             player.onCollide(boundary.name, () => {
                                 if (!player.isInDialogue) {
                                     player.isInDialogue = true;
-                                    k.go("home");
-                                    player.isInDialogue = false;
-                                }
-                            });
-                        }
-                        else if (boundary.name === "enter-castle"){
-                            player.onCollide(boundary.name, () => {
-                                if (!player.isInDialogue) {
-                                    player.isInDialogue = true;
-                                    k.go("castle_l1");
+                                    k.go("main");
                                     player.isInDialogue = false;
                                 }
                             });
@@ -70,13 +61,14 @@ export function mainScene(k) {
                 }
                 continue;   
             }
-    
+
             if (layer.name === "player-spawn"){
+                console.log(layer.name);
                 for (const entity of layer.objects){
                     if (entity.name === "player"){
                         player.pos = k.vec2(
-                            (map.pos.x + entity.x) * scaleFactor,
-                            (map.pos.y + entity.y) * scaleFactor
+                            (home.pos.x + entity.x) * scaleFactor,
+                            (home.pos.y + entity.y) * scaleFactor
                         );
                         k.add(player);
                         continue;
@@ -84,7 +76,7 @@ export function mainScene(k) {
                 }
             }
         }
-    
+
         setCamScale(k);
     
         k.onResize(() => {
@@ -94,7 +86,7 @@ export function mainScene(k) {
         k.onUpdate(() => {
             k.camPos(player.pos.x, player.pos.y - 100);
         });
-    
+
         k.onMouseDown((mouseBtn) => {
             if (mouseBtn != "left" || player.isInDialogue){
                 return;

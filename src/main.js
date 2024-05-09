@@ -1,5 +1,8 @@
 
 import { k } from "./kaboomCtx"
+import { castle_l1Scene } from "./scenes/castle_l1Scene";
+import { castle_l2Scene } from "./scenes/castle_l2Scene";
+import { homeScene } from "./scenes/homeScene";
 import { mainScene } from "./scenes/mainScene";
 
 
@@ -32,8 +35,15 @@ k.loadSprite("character", "./character.png", {
 });
 
 k.loadSprite("map", "./map.png");
+k.loadSprite("home", "./home.png");
+k.loadSprite("castle_l1", "./castle_l1.png");
+k.loadSprite("castle_l2", "./castle_l2.png");
+
 k.setBackground(k.Color.fromHex("#213357"));
 
 mainScene(k);
+homeScene(k);
+castle_l1Scene(k);
+castle_l2Scene(k);
 
 k.go("main");
