@@ -15,9 +15,13 @@ export const dialogueData = {
     "studytable": "This is my study table. I usually study here. Or brainstorm for new ideas.",
     "fencing": "This is my fencing sword. I was a national fencer in school.",
     "basketball": "This is my basketball. I used to play basketball in school.",
-    "resume": 'This is my <a href="https://github.com/bhavithmanapoty" target="_blank">resume.</a> You can look at it if you want!',
+    "aboutme": 'This is <a href="https://github.com/bhavithmanapoty" target="_blank">some information about me</a>. You can look at it if you want!',
     "switch": "Ya-ha-ha! You found my Nintendo Switch! I play a lot of Zelda and Baba Is You on this.",
     "tv": "Wubba Lubba Dub Dub! This is my TV. I watch interdimensional cable on this.",
     "couch": "This is the couch that my friends crash on when they come over.",
     "l2_sign": "Proceed downstairs to learn more about my projects!",
+}
+
+export const fullScreenDialogueData = {
+    "exp1": ["About Me", "I am Bhavith Manapoty, a Computer Science graduate from the University of Edinburgh. I am passionate about Artificial Intelligence and Game Development. I have experience in developing games using Unity and Godot. I have also worked on projects involving Machine Learning and Computer Vision. I am currently working on a project that involves developing a game using Godot and implementing a Machine Learning model to control the game."],
 }

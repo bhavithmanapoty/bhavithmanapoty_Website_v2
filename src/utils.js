@@ -31,6 +31,28 @@ export function displayDialogue(text, onDialogueEnd) {
     closeBtn.addEventListener('click', onCloseBtnClick);
 }
 
+export function displayFullscreenDialogue(title, text, onDialogueEnd) {
+    const dialogueUI = document.getElementById('full-textbox-container');
+    const titleElement = document.getElementById('title');
+    const dialogue = document.getElementById('full-dialogue');
+    const closeBtn = document.getElementById('fullclose');
+
+    titleElement.innerText = title;
+    dialogue.innerText = text;
+    dialogueUI.style.display = 'block';
+
+    function onCloseBtnClick() {
+        onDialogueEnd();
+        dialogueUI.style.display = 'none';
+        titleElement.innerText = '';
+        dialogue.innerText = '';
+        closeBtn.removeEventListener('click', onCloseBtnClick);
+        document.getElementById("game").focus();
+    }
+
+    closeBtn.addEventListener('click', onCloseBtnClick);
+}
+
 export function setCamScale(k) {
     const resizeFactor = k.width() / k.height()
 

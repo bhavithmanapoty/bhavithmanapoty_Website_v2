@@ -18,8 +18,8 @@
             "scale": 2,
             "selectedLayer": 9,
             "viewCenter": {
-                "x": 171.75,
-                "y": 113.75
+                "x": 203,
+                "y": 163.25
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json#0x72_DungeonTilesetII_v1.7": {
@@ -73,10 +73,10 @@
                 6
             ],
             "scale": 3,
-            "selectedLayer": 4,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 79.83333333333333,
-                "y": 75.83333333333334
+                "x": 113,
+                "y": 111.49999999999999
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json#Inner": {

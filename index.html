@@ -44,6 +44,32 @@
         filter: drop-shadow(0 0 0.75rem rgb(112, 112, 112));
       }
 
+      #full-textbox{
+        position: absolute;
+        left: 25%;
+        right: 25%;
+        top: 15%;
+        bottom: 15%;
+        background: white;
+        border-radius: 3px;
+        outline-style: solid;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        word-spacing: 0.2rem;
+        filter: drop-shadow(0 0 0.75rem rgb(112, 112, 112));
+      }
+
+      .ui-title {
+        font-family: monogram, monospace;
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 2rem;
+      }
+
       .ui-text{
         margin: 0;
         user-select: none;
@@ -81,6 +107,17 @@
     <div id="app">
       <div id="ui">
         <p class="note">Tap/Click around to move</p>
+
+        <div id="full-textbox-container" style="display: none">
+          <div id="full-textbox">
+            <h1 id="title" class="ui-title">Title Here</h1>
+            <p id="full-dialogue" class="ui-text"></p>
+            <div class="button-container">
+              <button id="fullclose" class="ui-close-btn">Close</button>
+            </div>
+          </div>
+        </div>
+
         <div id="textbox-container" style="display: none">
           <div id="textbox">
             <p id="dialogue" class="ui-text"></p>
