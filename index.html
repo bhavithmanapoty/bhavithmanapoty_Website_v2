@@ -46,10 +46,10 @@
 
       #full-textbox{
         position: absolute;
-        left: 25%;
-        right: 25%;
-        top: 15%;
-        bottom: 15%;
+        left: 5vh;
+        right: 5vh;
+        top: 5vh;
+        bottom: auto;
         background: white;
         border-radius: 3px;
         outline-style: solid;
@@ -57,17 +57,46 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         word-spacing: 0.2rem;
         filter: drop-shadow(0 0 0.75rem rgb(112, 112, 112));
       }
 
+      #full-textbox-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        overflow-y: auto;
+      }
+
+      #title-container {
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+      }
+
+      #text-container {
+        width: 100%;
+        overflow-y: auto;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+
       .ui-title {
         font-family: monogram, monospace;
-        font-size: 2em;
+        font-size: 2rem;
         font-weight: bold;
         margin-bottom: 2rem;
+        text-align: center;
       }
 
       .ui-text{
@@ -110,8 +139,12 @@
 
         <div id="full-textbox-container" style="display: none">
           <div id="full-textbox">
-            <h1 id="title" class="ui-title">Title Here</h1>
-            <p id="full-dialogue" class="ui-text"></p>
+            <div id="title-container">
+              <h1 id="title" class="ui-title">Title Here</h1>
+            </div>
+            <div id="text-container">
+              <p id="full-dialogue" class="ui-text"></p>
+            </div>
             <div class="button-container">
               <button id="fullclose" class="ui-close-btn">Close</button>
             </div>
