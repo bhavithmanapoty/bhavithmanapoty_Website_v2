@@ -42,6 +42,7 @@ export const fullScreenDialogueData = {
     "proj6": ["Discotheque", "This is some placeholder text for the third project. I will update this later."],
     "proj7": ["Human Activity Recognition App", "This is some placeholder text for the third project. I will update this later."],
     "proj8": ["Portfolio Website v2", "This is some placeholder text for the third project. I will update this later."],
+    "aboutme": ["About Me", "I am a Computer Science graduate from the University of Edinburgh. I am passionate about technology and I love to learn new things. I am a quick learner and I am always looking for new challenges. I am a team player and I am always willing to help others. I am a hard worker and I am always looking for ways to improve myself. I am a creative thinker and I am always looking for new ideas. I am a problem solver and I am always looking for ways to solve problems. I am a good communicator and I am always looking for ways to communicate effectively. I am a good listener and I am always looking for ways to listen to others. I am a good leader and I am always looking for ways to lead others. I am a good follower and I am always looking for ways to follow others. I am a good friend and I am always looking for ways to be a good friend. I am a good person and I am always looking for ways to be a good person."],
 }
 
 export const gameState = {

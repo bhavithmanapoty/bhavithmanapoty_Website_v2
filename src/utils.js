@@ -1,3 +1,5 @@
+import { dialogueData, fullScreenDialogueData } from './constants.js';
+
 export function displayDialogue(text, onDialogueEnd) {
     const dialogueUI = document.getElementById('textbox-container');
     const dialogue = document.getElementById('dialogue');
@@ -77,4 +79,31 @@ export function setCamScale(k) {
         return;
     } 
     k.camScale(k.vec2(1.5))
+}
+
+export function setupNavbarEventListeners() {
+    document.getElementById('aboutMe').addEventListener('click', () => {
+        console.log("About Me clicked");
+        displayFullscreenDialogue(fullScreenDialogueData["aboutme"][0], fullScreenDialogueData["aboutme"][1], function() {
+            console.log("Closed About Me");
+        });
+    });
+
+    document.getElementById('experiences').addEventListener('click', () => {
+        displayFullscreenDialogue(fullScreenDialogueData["experiences"][0], fullScreenDialogueData["experiences"][1], function() {
+            console.log("Closed Experiences");
+        });
+    });
+
+    document.getElementById('projects').addEventListener('click', () => {
+        displayFullscreenDialogue(fullScreenDialogueData["projects"][0], fullScreenDialogueData["projects"][1], function() {
+            console.log("Closed Projects");
+        });
+    });
+
+    document.getElementById('contactMe').addEventListener('click', () => {
+        displayFullscreenDialogue(fullScreenDialogueData["contactme"][0], fullScreenDialogueData["contactme"][1], function() {
+            console.log("Closed Contact Me");
+        });
+    });
 }

@@ -124,21 +124,59 @@
       .note {
         position: absolute;
         left: 5%;
-        /* top: 1vh; */
+        top: calc(100% + 1vh);
         display: flex;
         flex-direction: column;
         color: rgb(238, 238, 238);
         user-select: none;
       }
 
+      .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1rem 0;
+        z-index: 1010;
+        background-color: rgb(33, 51, 87);
+      }
+
+      .navbar button {
+        padding: 10px 20px;
+        font-family: monogram, monospace;
+        font-size: 1.5rem;
+        color: white;
+        font-weight: bold;
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      .navbar button:hover {
+        background-color: white;
+        color: black;
+      }
 
     </style>
+
+
     <div id="app">
       <div id="ui">
+        <nav class="navbar">
+          <button id="aboutMe">About Me</button>
+          <button id="experiences">Experiences</button>
+          <button id="projects">Projects</button>
+          <button id="resume">Resume</button>
+          <button id="contactMe">Contact Me</button>
+        </nav>
         <p class="note" style="top: 1vh">Tap/Click around to move</p>
         <p class="note" style="top: 4vh">Press Enter to close textboxes</p>
-
-
+        
         <div id="full-textbox-container" style="display: none">
           <div id="full-textbox">
             <div id="title-container">
@@ -164,6 +202,12 @@
       </div>
       <canvas id="game"></canvas>
     </div>
+    <script type="module">
+      import { setupNavbarEventListeners } from './src/utils.js';
+      document.addEventListener('DOMContentLoaded', function() {
+          setupNavbarEventListeners();
+      });
+    </script>
     <script type="module" src="src/main.js"></script>
   </body>
 </html>
