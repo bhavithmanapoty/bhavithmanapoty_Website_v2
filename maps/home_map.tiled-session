@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json",
+    "activeFile": "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json",
     "expandedProjectPaths": [
     ],
     "fileStates": {
@@ -12,14 +12,14 @@
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json": {
             "expandedObjectLayers": [
-                10,
-                9
+                9,
+                10
             ],
-            "scale": 2,
+            "scale": 23,
             "selectedLayer": 9,
             "viewCenter": {
-                "x": 203,
-                "y": 163.25
+                "x": 55,
+                "y": 232.41304347826087
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json#0x72_DungeonTilesetII_v1.7": {
@@ -48,24 +48,30 @@
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json": {
             "expandedObjectLayers": [
-                5,
-                4
+                4,
+                5
             ],
-            "scale": 4,
-            "selectedLayer": 2,
+            "scale": 23,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 271.625,
-                "y": 150.125
+                "x": 254.86956521739128,
+                "y": 200.41304347826087
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#0x72_DungeonTilesetII_v1.7": {
             "scaleInDock": 5.5
+        },
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#16x16_sm_ascii": {
+            "scaleInDock": 2
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#Inner": {
             "scaleInDock": 2
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#atlas_floor-16x16": {
             "scaleInDock": 4
+        },
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#atlas_walls_high-16x32": {
+            "scaleInDock": 3
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json": {
             "expandedObjectLayers": [
@@ -75,8 +81,8 @@
             "scale": 3,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 113,
-                "y": 111.49999999999999
+                "x": 325.33333333333337,
+                "y": 189.16666666666669
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json#Inner": {
@@ -96,14 +102,14 @@
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json": {
             "expandedObjectLayers": [
-                17,
-                18
+                18,
+                17
             ],
             "scale": 2,
             "selectedLayer": 10,
             "viewCenter": {
-                "x": 153.25,
-                "y": 162.75
+                "x": 239.75,
+                "y": 159.75
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json#Inner": {
@@ -124,11 +130,17 @@
     "map.tileHeight": 16,
     "map.tileWidth": 16,
     "openFiles": [
-        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json"
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json",
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json",
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json",
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json"
     ],
     "project": "home_map.tiled-project",
     "recentFiles": [
-        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json"
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json",
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json",
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json",
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json"
     ],
     "tileset.embedInMap": true,
     "tileset.tileSize": {

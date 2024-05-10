@@ -32,4 +32,12 @@ export const fullScreenDialogueData = {
     "exp7": ["Web Migration Intern (Jun 2021 - Aug 2021)",""],
     "exp8": ["Embedded Systems Developer (Dec 2019 - Sept 2020)","This is some placeholder text for the second experience. I will update this later."],
     "exp9": ["Technical Head (Jun 2019 - Sept 2020)","This is some placeholder text for the second experience. I will update this later."],
+    "proj1": ["AutoTrash", "This is some placeholder text for the first project. I will update this later."],
+    "proj2": ["Touche Tracker", "This is some placeholder text for the second project. I will update this later."],
+    "proj3": ["Charitron", "This is some placeholder text for the third project. I will update this later."],
+    "proj4": ["Portfolio Website v1", "This is some placeholder text for the third project. I will update this later."],
+    "proj5": ["Edinburgh Purity Test", "This is some placeholder text for the third project. I will update this later."],
+    "proj6": ["Discotheque", "This is some placeholder text for the third project. I will update this later."],
+    "proj7": ["Human Activity Recognition App", "This is some placeholder text for the third project. I will update this later."],
+    "proj8": ["Portfolio Website v2", "This is some placeholder text for the third project. I will update this later."],
 }

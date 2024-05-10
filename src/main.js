@@ -46,5 +46,5 @@ homeScene(k);
 castle_l1Scene(k);
 castle_l2Scene(k);
 
-k.go("main");
-// k.go("castle_l1");
+// k.go("main");
+k.go("castle_l2");

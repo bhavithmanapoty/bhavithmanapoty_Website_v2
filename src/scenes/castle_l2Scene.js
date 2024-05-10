@@ -1,5 +1,5 @@
-import { dialogueData, scaleFactor } from "../constants";
-import { displayDialogue, setCamScale } from "../utils";
+import { dialogueData, fullScreenDialogueData, scaleFactor } from "../constants";
+import { displayDialogue, displayFullscreenDialogue, setCamScale } from "../utils";
 
 export function castle_l2Scene(k) {
     k.scene("castle_l2", async () => {
@@ -13,7 +13,7 @@ export function castle_l2Scene(k) {
         ]);
 
         const player = k.make([
-            k.sprite("character", {anim: "idle-up"}),
+            k.sprite("character", {anim: "idle-down"}),
             k.area({
                 shape: new k.Rect(k.vec2(0, 0), 10, 15),
             }),
@@ -58,6 +58,16 @@ export function castle_l2Scene(k) {
                                     k.go("castle_l1");
                                     player.isInDialogue = false;
                                 }
+                            });
+                        }
+                        else if (/^proj[1-8]$/.test(boundary.name)) {
+                            player.onCollide(boundary.name, () => {
+                              player.isInDialogue = true;
+                              displayFullscreenDialogue(
+                                fullScreenDialogueData[boundary.name][0],
+                                fullScreenDialogueData[boundary.name][1],
+                                () => (player.isInDialogue = false)
+                              );
                             });
                         }
                         else if (boundary.name !== "wall"){

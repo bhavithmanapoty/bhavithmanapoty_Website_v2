@@ -1,0 +1,18 @@
+BUGS TO FIX:
+- Fade transition
+- return to entry point of house/castle
+- Enter to close text box
+- Position of close button
+- Fix some CSS for full screen dialogues
+
+
+
+Projects:
+- AutoTrash
+- Touche Tracker
+- Charitron
+- Portfolio Website v1
+- Edinburgh Purity Test
+- Discotheque
+- Human Activity Recognition App
+- Portfolio Website v2
