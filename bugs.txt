@@ -1,3 +1,7 @@
 BUGS TO FIX:
 - Fade transition
 - Position of close button
+- Social media links take too long
+- Show about me in the home study table
+- add sign for castle l1 and l2
+- make castle l1 statues/trophies instead of chests

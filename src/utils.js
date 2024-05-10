@@ -106,4 +106,31 @@ export function setupNavbarEventListeners() {
             console.log("Closed Contact Me");
         });
     });
+
+    // Setup for responsive navbar
+    const hamburger = document.getElementById('hamburger-menu');
+    const buttons = document.querySelectorAll('.navbar button');
+    const dropdown = document.createElement('div');
+    dropdown.style.display = 'none';
+    dropdown.className = 'dropdown-content';
+    document.querySelector('.navbar').appendChild(dropdown);
+
+    buttons.forEach(button => {
+        const item = button.cloneNode(true);
+        item.style.display = 'block'; // Ensure it's always block in dropdown
+        dropdown.appendChild(item);
+    });
+
+    hamburger.addEventListener('click', () => {
+        dropdown.style.display = (dropdown.style.display === 'none') ? 'block' : 'none';
+    });
+
+    // Re-using button event listeners for dropdown
+    dropdown.querySelectorAll('button').forEach(button => {
+        button.addEventListener('click', function() {
+            dropdown.style.display = 'none'; // Hide dropdown after selection
+            // Trigger original button actions if they exist
+            document.getElementById(button.id).click();
+        });
+    });
 }

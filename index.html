@@ -124,7 +124,7 @@
       .note {
         position: absolute;
         left: 5%;
-        top: calc(100% + 1vh);
+        top: calc(40px + 1vh);
         display: flex;
         flex-direction: column;
         color: rgb(238, 238, 238);
@@ -132,7 +132,7 @@
       }
 
       .navbar {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -141,8 +141,9 @@
         flex-wrap: wrap;
         justify-content: space-around;
         padding: 1rem 0;
-        z-index: 1010;
+        z-index: 900;
         background-color: rgb(33, 51, 87);
+        max-height: 40px;
       }
 
       .navbar button {
@@ -162,20 +163,73 @@
         color: black;
       }
 
+      .navbar .hamburger-menu {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+        color: white;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar .hamburger-menu img {
+        width: 40px;
+        height: auto;
+      }
+
+      @media (max-width: 650px) {
+        .navbar button {
+            display: none; /* Hide all buttons on small screens */
+        }
+
+        .navbar .hamburger-menu {
+          display: block; /* Show hamburger icon on small screens */
+        }
+      }
+
+      /* Menu styling for dropdown */
+      .navbar .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: rgb(33, 51, 87);
+          min-width: 160px;
+          z-index: 910;
+          width: 100%;
+          height: auto;
+      }
+
+      .navbar .dropdown-content button {
+        font-family: monogram, monospace;
+        font-size: 1.8rem;
+        color: white;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        background: none;
+        border: none;
+        width: 100%;
+      }
+
+      .navbar .dropdown-content button:hover {
+          background-color: #f1f1f1;
+      }
     </style>
 
 
     <div id="app">
       <div id="ui">
         <nav class="navbar">
+          <div id="hamburger-menu" class="hamburger-menu">
+            <img src="/hamburger_icon.png" alt="Menu">
+          </div>
           <button id="aboutMe">About Me</button>
           <button id="experiences">Experiences</button>
           <button id="projects">Projects</button>
           <button id="resume">Resume</button>
           <button id="contactMe">Contact Me</button>
         </nav>
-        <p class="note" style="top: 1vh">Tap/Click around to move</p>
-        <p class="note" style="top: 4vh">Press Enter to close textboxes</p>
+        <p class="note" style="top: calc(40px + 1vh)">Tap/Click around to move</p>
+        <p class="note" style="top: calc(40px + 5vh)">Press Enter to close textboxes</p>
         
         <div id="full-textbox-container" style="display: none">
           <div id="full-textbox">
