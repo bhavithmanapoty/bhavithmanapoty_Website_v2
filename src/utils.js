@@ -111,26 +111,41 @@ export function setupNavbarEventListeners() {
     const hamburger = document.getElementById('hamburger-menu');
     const buttons = document.querySelectorAll('.navbar button');
     const dropdown = document.createElement('div');
-    dropdown.style.display = 'none';
     dropdown.className = 'dropdown-content';
+    dropdown.style.display = 'none';
     document.querySelector('.navbar').appendChild(dropdown);
 
+    // Create close button
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'X';
+    closeButton.className = 'close-button';
+    dropdown.appendChild(closeButton);
+
+    // Append cloned buttons to dropdown
     buttons.forEach(button => {
         const item = button.cloneNode(true);
         item.style.display = 'block'; // Ensure it's always block in dropdown
         dropdown.appendChild(item);
     });
 
+    // Event listener for hamburger menu
     hamburger.addEventListener('click', () => {
         dropdown.style.display = (dropdown.style.display === 'none') ? 'block' : 'none';
     });
 
+    // Event listener for close button
+    closeButton.addEventListener('click', () => {
+        dropdown.style.display = 'none';
+    });
+
     // Re-using button event listeners for dropdown
     dropdown.querySelectorAll('button').forEach(button => {
-        button.addEventListener('click', function() {
-            dropdown.style.display = 'none'; // Hide dropdown after selection
-            // Trigger original button actions if they exist
-            document.getElementById(button.id).click();
-        });
+        if (button !== closeButton) { // Exclude the close button
+            button.addEventListener('click', function() {
+                dropdown.style.display = 'none'; // Hide dropdown after selection
+                // Trigger original button actions if they exist
+                document.getElementById(button.id).click();
+            });
+        }
     });
 }
