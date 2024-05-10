@@ -1,4 +1,4 @@
-import { dialogueData, fullScreenDialogueData, scaleFactor } from "../constants";
+import { dialogueData, fullScreenDialogueData, scaleFactor, gameState } from "../constants";
 import { displayDialogue, displayFullscreenDialogue, setCamScale } from "../utils";
 
 export function castle_l2Scene(k) {
@@ -25,6 +25,7 @@ export function castle_l2Scene(k) {
                 speed: 250,
                 direction: "down",
                 isInDialogue: false,
+                fromArea: gameState.player.fromArea
             },
             "player",
         ]);
@@ -55,6 +56,7 @@ export function castle_l2Scene(k) {
                             player.onCollide(boundary.name, () => {
                                 if (!player.isInDialogue) {
                                     player.isInDialogue = true;
+                                    gameState.player.fromArea = "castle_l2";
                                     k.go("castle_l1");
                                     player.isInDialogue = false;
                                 }
@@ -82,7 +84,6 @@ export function castle_l2Scene(k) {
             }
 
             if (layer.name === "player-spawn"){
-                console.log(layer.name);
                 for (const entity of layer.objects){
                     if (entity.name === "player"){
                         player.pos = k.vec2(

@@ -1,5 +1,6 @@
-import { dialogueData, scaleFactor } from "../constants";
+import { dialogueData, gameState, scaleFactor } from "../constants";
 import { displayDialogue, setCamScale } from "../utils";
+import { mainScene } from "./mainScene";
 
 export function homeScene(k) {
     k.scene("home", async () => {
@@ -23,8 +24,9 @@ export function homeScene(k) {
             k.scale(scaleFactor),
             {
                 speed: 250,
-                direction: "down",
+                direction: "up",
                 isInDialogue: false,
+                fromArea: gameState.player.fromArea
             },
             "player",
         ]);
@@ -46,6 +48,7 @@ export function homeScene(k) {
                             player.onCollide(boundary.name, () => {
                                 if (!player.isInDialogue) {
                                     player.isInDialogue = true;
+                                    gameState.player.fromArea = "home";
                                     k.go("main");
                                     player.isInDialogue = false;
                                 }
@@ -63,7 +66,6 @@ export function homeScene(k) {
             }
 
             if (layer.name === "player-spawn"){
-                console.log(layer.name);
                 for (const entity of layer.objects){
                     if (entity.name === "player"){
                         player.pos = k.vec2(

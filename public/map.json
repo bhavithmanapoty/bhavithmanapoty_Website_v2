@@ -328,6 +328,30 @@
                  "width":0,
                  "x":160,
                  "y":255
+                }, 
+                {
+                 "height":0,
+                 "id":162,
+                 "name":"home-player",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":72,
+                 "y":276
+                }, 
+                {
+                 "height":0,
+                 "id":163,
+                 "name":"castle-player",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":160,
+                 "y":58
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -583,15 +607,15 @@
                  "y":207.984375
                 }, 
                 {
-                 "height":3.74431818181819,
+                 "height":4,
                  "id":90,
                  "name":"home-sign",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":4,
-                 "x":118.03125,
-                 "y":264.880681818182
+                 "x":118,
+                 "y":264
                 }, 
                 {
                  "height":10.7386363636364,
@@ -614,17 +638,6 @@
                  "width":13.7841,
                  "x":113.17045,
                  "y":253.97443
-                }, 
-                {
-                 "height":3.74432,
-                 "id":97,
-                 "name":"shop-sign",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":3.96875,
-                 "x":198.03125,
-                 "y":265.00284
                 }, 
                 {
                  "height":9.90909090909088,
@@ -669,8 +682,7 @@
                  "width":77.875,
                  "x":209.125,
                  "y":197
-                },
-            
+                }, 
                 {
                  "height":19.5625,
                  "id":102,
@@ -681,7 +693,8 @@
                  "width":5.125,
                  "x":211.0625,
                  "y":222.5
-                }, 
+                },
+            
                 {
                  "height":19.5625,
                  "id":103,
@@ -1000,8 +1013,7 @@
                  "width":18.9090909090909,
                  "x":221.272727272727,
                  "y":48
-                },
-            
+                }, 
                 {
                  "height":21.0909090909091,
                  "id":134,
@@ -1012,7 +1024,8 @@
                  "width":5.36363636363635,
                  "x":234.636363636364,
                  "y":47.9090909090909
-                }, 
+                },
+            
                 {
                  "height":5.09090909090909,
                  "id":135,
@@ -1254,6 +1267,17 @@
                  "width":0,
                  "x":214.1875,
                  "y":-10.0625
+                }, 
+                {
+                 "height":4,
+                 "id":161,
+                 "name":"shop-sign",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":4,
+                 "x":198,
+                 "y":264
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1262,7 +1286,7 @@
          "y":0
         }],
  "nextlayerid":19,
- "nextobjectid":161,
+ "nextobjectid":164,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",

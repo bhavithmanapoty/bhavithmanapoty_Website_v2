@@ -41,3 +41,10 @@ export const fullScreenDialogueData = {
     "proj7": ["Human Activity Recognition App", "This is some placeholder text for the third project. I will update this later."],
     "proj8": ["Portfolio Website v2", "This is some placeholder text for the third project. I will update this later."],
 }
+
+export const gameState = {
+    player: {
+        currArea: null,
+        fromArea: null
+    }
+};

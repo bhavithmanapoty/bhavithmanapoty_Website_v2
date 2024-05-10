@@ -25,10 +25,18 @@ export function displayDialogue(text, onDialogueEnd) {
         dialogue.innerHTML = '';
         clearInterval(intervalRef);
         closeBtn.removeEventListener('click', onCloseBtnClick);
+        document.removeEventListener('keydown', onKeyDown);
         document.getElementById("game").focus();
     }
 
+    function onKeyDown(event) {
+        if (event.key === 'Enter') {
+            onCloseBtnClick();
+        }
+    }
+
     closeBtn.addEventListener('click', onCloseBtnClick);
+    document.addEventListener('keydown', onKeyDown);
 }
 
 export function displayFullscreenDialogue(title, text, onDialogueEnd) {
@@ -47,10 +55,18 @@ export function displayFullscreenDialogue(title, text, onDialogueEnd) {
         titleElement.innerText = '';
         dialogue.innerText = '';
         closeBtn.removeEventListener('click', onCloseBtnClick);
+        document.removeEventListener('keydown', onKeyDown);
         document.getElementById("game").focus();
     }
 
+    function onKeyDown(event) {
+        if (event.key === 'Enter') {
+            onCloseBtnClick();
+        }
+    }
+
     closeBtn.addEventListener('click', onCloseBtnClick);
+    document.addEventListener('keydown', onKeyDown);
 }
 
 export function setCamScale(k) {

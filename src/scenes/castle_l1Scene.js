@@ -1,4 +1,4 @@
-import { dialogueData, fullScreenDialogueData, scaleFactor } from "../constants";
+import { dialogueData, fullScreenDialogueData, scaleFactor, gameState } from "../constants";
 import { displayDialogue, displayFullscreenDialogue, setCamScale } from "../utils";
 
 export function castle_l1Scene(k) {
@@ -23,8 +23,9 @@ export function castle_l1Scene(k) {
             k.scale(scaleFactor),
             {
                 speed: 250,
-                direction: "down",
+                direction: "up",
                 isInDialogue: false,
+                fromArea: gameState.player.fromArea
             },
             "player",
         ]);
@@ -46,6 +47,7 @@ export function castle_l1Scene(k) {
                             player.onCollide(boundary.name, () => {
                                 if (!player.isInDialogue) {
                                     player.isInDialogue = true;
+                                    gameState.player.fromArea = "castle";
                                     k.go("main");
                                     player.isInDialogue = false;
                                 }
@@ -82,15 +84,26 @@ export function castle_l1Scene(k) {
             }
 
             if (layer.name === "player-spawn"){
-                console.log(layer.name);
                 for (const entity of layer.objects){
-                    if (entity.name === "player"){
-                        player.pos = k.vec2(
-                            (castle_l1.pos.x + entity.x) * scaleFactor,
-                            (castle_l1.pos.y + entity.y) * scaleFactor
-                        );
-                        k.add(player);
-                        continue;
+                    if (player.fromArea === "main"){
+                        if (entity.name === "player"){
+                            player.pos = k.vec2(
+                                (castle_l1.pos.x + entity.x) * scaleFactor,
+                                (castle_l1.pos.y + entity.y) * scaleFactor
+                            );
+                            k.add(player);
+                            continue;
+                        }
+                    }
+                    else if (player.fromArea === "castle_l2"){
+                        if (entity.name === "l2-player"){
+                            player.pos = k.vec2(
+                                (castle_l1.pos.x + entity.x) * scaleFactor,
+                                (castle_l1.pos.y + entity.y) * scaleFactor
+                            );
+                            k.add(player);
+                            continue;
+                        }
                     }
                 }
             }

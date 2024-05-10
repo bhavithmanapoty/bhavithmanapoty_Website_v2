@@ -1,4 +1,4 @@
-import { dialogueData, scaleFactor } from "../constants";
+import { dialogueData, gameState, scaleFactor } from "../constants";
 import { displayDialogue, setCamScale } from "../utils";
 
 export function mainScene(k) {
@@ -25,6 +25,7 @@ export function mainScene(k) {
                 speed: 250,
                 direction: "down",
                 isInDialogue: false,
+                fromArea: gameState.player.fromArea
             },
             "player",
         ]);
@@ -46,6 +47,7 @@ export function mainScene(k) {
                             player.onCollide(boundary.name, () => {
                                 if (!player.isInDialogue) {
                                     player.isInDialogue = true;
+                                    gameState.player.fromArea = "main";
                                     k.go("home");
                                     player.isInDialogue = false;
                                 }
@@ -55,6 +57,7 @@ export function mainScene(k) {
                             player.onCollide(boundary.name, () => {
                                 if (!player.isInDialogue) {
                                     player.isInDialogue = true;
+                                    gameState.player.fromArea = "main";
                                     k.go("castle_l1");
                                     player.isInDialogue = false;
                                 }
@@ -73,13 +76,35 @@ export function mainScene(k) {
     
             if (layer.name === "player-spawn"){
                 for (const entity of layer.objects){
-                    if (entity.name === "player"){
-                        player.pos = k.vec2(
-                            (map.pos.x + entity.x) * scaleFactor,
-                            (map.pos.y + entity.y) * scaleFactor
-                        );
-                        k.add(player);
-                        continue;
+                    if (player.fromArea === null){
+                        if (entity.name === "player"){
+                            player.pos = k.vec2(
+                                (map.pos.x + entity.x) * scaleFactor,
+                                (map.pos.y + entity.y) * scaleFactor
+                            );
+                            k.add(player);
+                            continue;
+                        }
+                    }
+                    else if (player.fromArea === "home"){
+                        if (entity.name === "home-player"){
+                            player.pos = k.vec2(
+                                (map.pos.x + entity.x) * scaleFactor,
+                                (map.pos.y + entity.y) * scaleFactor
+                            );
+                            k.add(player);
+                            continue;
+                        }
+                    }
+                    else if (player.fromArea === "castle"){
+                        if (entity.name === "castle-player"){
+                            player.pos = k.vec2(
+                                (map.pos.x + entity.x) * scaleFactor,
+                                (map.pos.y + entity.y) * scaleFactor
+                            );
+                            k.add(player);
+                            continue;
+                        }
                     }
                 }
             }
