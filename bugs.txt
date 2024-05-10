@@ -1,4 +1,3 @@
 BUGS TO FIX:
 - Fade transition
-- return to entry point of house/castle
 - Position of close button

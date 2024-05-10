@@ -47,6 +47,7 @@ export function castle_l2Scene(k) {
                             player.onCollide(boundary.name, () => {
                                 if (!player.isInDialogue) {
                                     player.isInDialogue = true;
+                                    gameState.player.fromArea = "castle_l2";
                                     k.go("main");
                                     player.isInDialogue = false;
                                 }
@@ -85,13 +86,25 @@ export function castle_l2Scene(k) {
 
             if (layer.name === "player-spawn"){
                 for (const entity of layer.objects){
-                    if (entity.name === "player"){
-                        player.pos = k.vec2(
-                            (castle_l2.pos.x + entity.x) * scaleFactor,
-                            (castle_l2.pos.y + entity.y) * scaleFactor
-                        );
-                        k.add(player);
-                        continue;
+                    if (player.fromArea === "castle_l1"){
+                        if (entity.name === "player"){
+                            player.pos = k.vec2(
+                                (castle_l2.pos.x + entity.x) * scaleFactor,
+                                (castle_l2.pos.y + entity.y) * scaleFactor
+                            );
+                            k.add(player);
+                            continue;
+                        }
+                    }
+                    else if (player.fromArea === "main"){
+                        if (entity.name === "map-player"){
+                            player.pos = k.vec2(
+                                (castle_l2.pos.x + entity.x) * scaleFactor,
+                                (castle_l2.pos.y + entity.y) * scaleFactor
+                            );
+                            k.add(player);
+                            continue;
+                        }
                     }
                 }
             }

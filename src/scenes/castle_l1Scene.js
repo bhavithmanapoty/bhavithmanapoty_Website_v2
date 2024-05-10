@@ -57,6 +57,7 @@ export function castle_l1Scene(k) {
                             player.onCollide(boundary.name, () => {
                                 if (!player.isInDialogue) {
                                     player.isInDialogue = true;
+                                    gameState.player.fromArea = "castle_l1";
                                     k.go("castle_l2");
                                     player.isInDialogue = false;
                                 }

@@ -63,6 +63,18 @@ export function mainScene(k) {
                                 }
                             });
                         }
+                        else if (boundary.name === "enter-castle_l2"){
+                            player.onCollide(boundary.name, () => {
+                                if (!player.isInDialogue) {
+                                    player.isInDialogue = true;
+                                    gameState.player.fromArea = "main";
+                                    displayDialogue(dialogueData[boundary.name], () => {
+                                        player.isInDialogue = false;
+                                        k.go("castle_l2");
+                                    });
+                                }
+                            });
+                        }
                         else if (boundary.name !== "wall"){
                             player.onCollide(boundary.name, () => {
                                 player.isInDialogue = true;
@@ -98,6 +110,16 @@ export function mainScene(k) {
                     }
                     else if (player.fromArea === "castle"){
                         if (entity.name === "castle-player"){
+                            player.pos = k.vec2(
+                                (map.pos.x + entity.x) * scaleFactor,
+                                (map.pos.y + entity.y) * scaleFactor
+                            );
+                            k.add(player);
+                            continue;
+                        }
+                    }
+                    else if (player.fromArea === "castle_l2"){
+                        if (entity.name === "l2-player"){
                             player.pos = k.vec2(
                                 (map.pos.x + entity.x) * scaleFactor,
                                 (map.pos.y + entity.y) * scaleFactor

@@ -15,11 +15,11 @@
                 9,
                 10
             ],
-            "scale": 23,
-            "selectedLayer": 9,
+            "scale": 2,
+            "selectedLayer": 8,
             "viewCenter": {
-                "x": 55,
-                "y": 232.41304347826087
+                "x": 147,
+                "y": 130.25
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json#0x72_DungeonTilesetII_v1.7": {
@@ -51,27 +51,30 @@
                 4,
                 5
             ],
-            "scale": 2,
-            "selectedLayer": 3,
+            "scale": 8,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 164.5,
-                "y": 179.25
+                "x": 75,
+                "y": 82.3125
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#0x72_DungeonTilesetII_v1.7": {
-            "scaleInDock": 5.5
+            "scaleInDock": 1.5
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#16x16_sm_ascii": {
             "scaleInDock": 2
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#Inner": {
-            "scaleInDock": 2
+            "scaleInDock": 1.5
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#atlas_floor-16x16": {
             "scaleInDock": 4
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#atlas_walls_high-16x32": {
             "scaleInDock": 3
+        },
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#spritesheet": {
+            "scaleInDock": 2
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json": {
             "expandedObjectLayers": [
@@ -81,8 +84,8 @@
             "scale": 3,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 325.33333333333337,
-                "y": 189.16666666666669
+                "x": 112.66666666666666,
+                "y": 110.83333333333334
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json#Inner": {
@@ -108,21 +111,21 @@
             "scale": 2,
             "selectedLayer": 10,
             "viewCenter": {
-                "x": 102.5,
-                "y": 136.75
+                "x": 86,
+                "y": 157.25
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json#Inner": {
-            "scaleInDock": 5.5
+            "scaleInDock": 0.75
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json#Overworld": {
-            "scaleInDock": 4
+            "scaleInDock": 3
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json#character": {
             "scaleInDock": 4
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json#spritesheet": {
-            "scaleInDock": 2
+            "scaleInDock": 1
         }
     },
     "last.imagePath": "C:/Users/catch/Downloads/Game Assets",

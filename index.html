@@ -124,7 +124,7 @@
       .note {
         position: absolute;
         left: 5%;
-        top: 1vh;
+        /* top: 1vh; */
         display: flex;
         flex-direction: column;
         color: rgb(238, 238, 238);
@@ -135,7 +135,9 @@
     </style>
     <div id="app">
       <div id="ui">
-        <p class="note">Tap/Click around to move</p>
+        <p class="note" style="top: 1vh">Tap/Click around to move</p>
+        <p class="note" style="top: 4vh">Press Enter to close textboxes</p>
+
 
         <div id="full-textbox-container" style="display: none">
           <div id="full-textbox">

@@ -20,6 +20,8 @@ export const dialogueData = {
     "tv": "Wubba Lubba Dub Dub! This is my TV. I watch interdimensional cable on this.",
     "couch": "This is the couch that my friends crash on when they come over.",
     "l2_sign": "Proceed downstairs to learn more about my projects!",
+    "enter-castle_l2": "You found the secret passage! Proceed to find out about my projects!",
+    "coin": "You found a coin! Find the wishing well to make a wish!"
 }
 
 export const fullScreenDialogueData = {
@@ -44,7 +46,7 @@ export const fullScreenDialogueData = {
 
 export const gameState = {
     player: {
-        currArea: null,
-        fromArea: null
+        fromArea: null,
+        hasCoin: false
     }
 };
