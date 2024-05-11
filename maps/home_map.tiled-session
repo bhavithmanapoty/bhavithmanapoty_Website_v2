@@ -51,11 +51,11 @@
                 4,
                 5
             ],
-            "scale": 8,
-            "selectedLayer": 2,
+            "scale": 2,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 240,
-                "y": 159.9375
+                "x": 116,
+                "y": 113.75
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#0x72_DungeonTilesetII_v1.7": {

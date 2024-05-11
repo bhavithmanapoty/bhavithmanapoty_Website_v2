@@ -1,4 +1,4 @@
-import { dialogueData, fullScreenDialogueData, exps } from './constants.js';
+import { fullScreenDialogueData, exps, projs } from './constants.js';
 
 export function displayDialogue(text, onDialogueEnd) {
     const dialogueUI = document.getElementById('textbox-container');
@@ -48,7 +48,7 @@ export function displayFullscreenDialogue(title, text, onDialogueEnd) {
     const closeBtn = document.getElementById('fullclose');
 
     titleElement.innerText = title;
-    dialogue.innerText = text;
+    dialogue.innerHTML = text;
     dialogueUI.style.display = 'block';
 
     function onCloseBtnClick() {
@@ -85,20 +85,28 @@ export function displayNavigableDialogue(allData, onDialogueEnd) {
 
     function updateDialogue(index) {
         titleElement.innerText = allData[index].title;
-        dialogue.innerText = allData[index].text;
+        dialogue.innerHTML = allData[index].text;
     }
-
+    
     updateDialogue(currentIndex);
 
     navLeft.onclick = () => {
         if (currentIndex > 0) {
             updateDialogue(--currentIndex);
         }
+        else if (currentIndex === 0){
+            updateDialogue(allData.length - 1);
+            currentIndex = allData.length - 1;
+        }
     };
 
     navRight.onclick = () => {
         if (currentIndex < allData.length - 1) {
             updateDialogue(++currentIndex);
+        }
+        else if (currentIndex === allData.length - 1) {
+            updateDialogue(0);
+            currentIndex = 0;
         }
     };
 
@@ -118,8 +126,16 @@ export function displayNavigableDialogue(allData, onDialogueEnd) {
     }
 
     function onKeyDown(event) {
-        if (event.key === 'Enter') {
-            onCloseBtnClick();
+        switch(event.key) {
+            case 'Enter':
+                onCloseBtnClick();
+                break;
+            case 'ArrowLeft':
+                navLeft.click();
+                break;
+            case 'ArrowRight':
+                navRight.click();
+                break;
         }
     }
 
@@ -152,9 +168,13 @@ export function setupNavbarEventListeners() {
     });
 
     document.getElementById('projects').addEventListener('click', () => {
-        displayFullscreenDialogue(fullScreenDialogueData["projects"][0], fullScreenDialogueData["projects"][1], function() {
-            console.log("Closed Projects");
+        displayNavigableDialogue(projs, function() {
+            console.log("Closed Experiences");
         });
+    });
+
+    document.getElementById('resume').addEventListener('click', () => {
+        window.open('https://drive.google.com/file/d/1VWXZNxgw7ZgKtJios7U4BTuXGZlR4Gfb/view?usp=sharing', '_blank');
     });
 
     document.getElementById('contactMe').addEventListener('click', () => {
@@ -171,35 +191,29 @@ export function setupNavbarEventListeners() {
     dropdown.style.display = 'none';
     document.querySelector('.navbar').appendChild(dropdown);
 
-    // Create close button
     const closeButton = document.createElement('button');
     closeButton.textContent = 'X';
     closeButton.className = 'close-button';
     dropdown.appendChild(closeButton);
 
-    // Append cloned buttons to dropdown
     buttons.forEach(button => {
         const item = button.cloneNode(true);
-        item.style.display = 'block'; // Ensure it's always block in dropdown
+        item.style.display = 'block';
         dropdown.appendChild(item);
     });
 
-    // Event listener for hamburger menu
     hamburger.addEventListener('click', () => {
         dropdown.style.display = (dropdown.style.display === 'none') ? 'block' : 'none';
     });
 
-    // Event listener for close button
     closeButton.addEventListener('click', () => {
         dropdown.style.display = 'none';
     });
 
-    // Re-using button event listeners for dropdown
     dropdown.querySelectorAll('button').forEach(button => {
-        if (button !== closeButton) { // Exclude the close button
+        if (button !== closeButton) {
             button.addEventListener('click', function() {
-                dropdown.style.display = 'none'; // Hide dropdown after selection
-                // Trigger original button actions if they exist
+                dropdown.style.display = 'none';
                 document.getElementById(button.id).click();
             });
         }

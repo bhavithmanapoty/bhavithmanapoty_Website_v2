@@ -1,6 +1,5 @@
-import { dialogueData, gameState, scaleFactor } from "../constants";
-import { displayDialogue, setCamScale } from "../utils";
-import { mainScene } from "./mainScene";
+import { dialogueData, gameState, scaleFactor, fullScreenDialogueData } from "../constants";
+import { displayDialogue, displayFullscreenDialogue, setCamScale } from "../utils";
 
 export function homeScene(k) {
     k.scene("home", async () => {
@@ -52,6 +51,13 @@ export function homeScene(k) {
                                     k.go("main");
                                     player.isInDialogue = false;
                                 }
+                            });
+                        }
+                        else if (boundary.name === "aboutme"){
+                            player.onCollide(boundary.name, () => {
+                                player.isInDialogue = true;
+                                displayFullscreenDialogue(fullScreenDialogueData["aboutme"][0], fullScreenDialogueData["aboutme"][1], () => (player.isInDialogue = false))
+                                // displayDialogue(dialogueData[boundary.name], () => (player.isInDialogue = false))
                             });
                         }
                         else if (boundary.name !== "wall"){
