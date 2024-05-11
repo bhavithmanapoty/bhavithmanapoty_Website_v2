@@ -108,13 +108,15 @@
         font-family: monogram, monospace;
         border-style: none;
         border-radius: 3px;
-        padding: 1rem;
+        padding: 0.5rem 1rem;
         font-size: inherit;
       }
 
-      .btn-container{
-        align-self: flex-end;
-        margin-top: 1rem;
+      .button-container{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
       }
 
       .social-icon{
@@ -242,6 +244,16 @@
         margin: 0 5px;
         cursor: pointer;
       }
+
+      .nav-buttons {
+        display: flex; /* Keeps nav buttons together */
+      }
+
+      .single-button-container {
+        justify-content: flex-end; /* Aligns the button to the right */
+      }
+
+
     </style>
 
 
@@ -269,8 +281,10 @@
               <p id="full-dialogue" class="ui-text"></p>
             </div>
             <div class="button-container">
-              <button id="nav-left" class="ui-nav-btn">←</button>
-              <button id="nav-right" class="ui-nav-btn">→</button>
+              <div class="nav-buttons">
+                <button id="nav-left" class="ui-nav-btn">←</button>
+                <button id="nav-right" class="ui-nav-btn">→</button>
+              </div>
               <button id="fullclose" class="ui-close-btn">Close</button>
             </div>
           </div>
@@ -279,7 +293,7 @@
         <div id="textbox-container" style="display: none">
           <div id="textbox">
             <p id="dialogue" class="ui-text"></p>
-            <div class="button-container">
+            <div class="button-container single-button-container">
               <button id="close" class="ui-close-btn">Close</button>
             </div>
           </div>
