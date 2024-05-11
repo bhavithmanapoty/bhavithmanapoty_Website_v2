@@ -1,4 +1,4 @@
-import { dialogueData, fullScreenDialogueData } from './constants.js';
+import { dialogueData, fullScreenDialogueData, exps } from './constants.js';
 
 export function displayDialogue(text, onDialogueEnd) {
     const dialogueUI = document.getElementById('textbox-container');
@@ -71,6 +71,63 @@ export function displayFullscreenDialogue(title, text, onDialogueEnd) {
     document.addEventListener('keydown', onKeyDown);
 }
 
+export function displayNavigableDialogue(allData, onDialogueEnd) {
+    const dialogueUI = document.getElementById('full-textbox-container');
+    const titleElement = document.getElementById('title');
+    const dialogue = document.getElementById('full-dialogue');
+    const closeBtn = document.getElementById('fullclose');
+    const navLeft = document.getElementById('nav-left');
+    const navRight = document.getElementById('nav-right');
+    let currentIndex = 0;
+
+    navLeft.style.display = 'inline-block';
+    navRight.style.display = 'inline-block';
+
+    function updateDialogue(index) {
+        titleElement.innerText = allData[index].title;
+        dialogue.innerText = allData[index].text;
+    }
+
+    updateDialogue(currentIndex);
+
+    navLeft.onclick = () => {
+        if (currentIndex > 0) {
+            updateDialogue(--currentIndex);
+        }
+    };
+
+    navRight.onclick = () => {
+        if (currentIndex < allData.length - 1) {
+            updateDialogue(++currentIndex);
+        }
+    };
+
+    function onCloseBtnClick() {
+        onDialogueEnd();
+        dialogueUI.style.display = 'none';
+        titleElement.innerText = '';
+        dialogue.innerText = '';
+        closeBtn.removeEventListener('click', onCloseBtnClick);
+        navLeft.onclick = null;
+        navRight.onclick = null;
+        document.removeEventListener('keydown', onKeyDown);
+        document.getElementById("game").focus();
+
+        navLeft.style.display = 'none';
+        navRight.style.display = 'none';
+    }
+
+    function onKeyDown(event) {
+        if (event.key === 'Enter') {
+            onCloseBtnClick();
+        }
+    }
+
+    closeBtn.addEventListener('click', onCloseBtnClick);
+    document.addEventListener('keydown', onKeyDown);
+    dialogueUI.style.display = 'block';
+}
+
 export function setCamScale(k) {
     const resizeFactor = k.width() / k.height()
 
@@ -83,14 +140,13 @@ export function setCamScale(k) {
 
 export function setupNavbarEventListeners() {
     document.getElementById('aboutMe').addEventListener('click', () => {
-        console.log("About Me clicked");
         displayFullscreenDialogue(fullScreenDialogueData["aboutme"][0], fullScreenDialogueData["aboutme"][1], function() {
             console.log("Closed About Me");
         });
     });
 
     document.getElementById('experiences').addEventListener('click', () => {
-        displayFullscreenDialogue(fullScreenDialogueData["experiences"][0], fullScreenDialogueData["experiences"][1], function() {
+        displayNavigableDialogue(exps, function() {
             console.log("Closed Experiences");
         });
     });

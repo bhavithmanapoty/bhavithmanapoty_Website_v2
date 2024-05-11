@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json",
+    "activeFile": "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json",
     "expandedProjectPaths": [
     ],
     "fileStates": {
@@ -108,11 +108,11 @@
                 18,
                 17
             ],
-            "scale": 2,
-            "selectedLayer": 10,
+            "scale": 4,
+            "selectedLayer": 11,
             "viewCenter": {
-                "x": 86,
-                "y": 157.25
+                "x": 216,
+                "y": 25.625
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json#Inner": {
@@ -140,10 +140,10 @@
     ],
     "project": "home_map.tiled-project",
     "recentFiles": [
-        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json",
-        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json",
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json",
-        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json"
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json",
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json",
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json"
     ],
     "tileset.embedInMap": true,
     "tileset.tileSize": {
