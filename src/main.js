@@ -4,6 +4,7 @@ import { castle_l1Scene } from "./scenes/castle_l1Scene";
 import { castle_l2Scene } from "./scenes/castle_l2Scene";
 import { homeScene } from "./scenes/homeScene";
 import { mainScene } from "./scenes/mainScene";
+import { Analytics } from "@vercel/analytics/react"
 
 
 k.loadSprite("character", "./character.png", {

@@ -13,6 +13,7 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.2.2",
     "kaboom": "^3000.1.17"
   }
 }
