@@ -59,7 +59,7 @@ export const fullScreenDialogueData = {
     "exp4": [exps[3].title, exps[3].text],
     "exp5": [exps[4].title, exps[4].text],
     "exp6": [exps[5].title, exps[5].text],
-    "exp7": [exps[6].title, exps[7].text],
+    "exp7": [exps[6].title, exps[6].text],
     "exp8": [exps[7].title, exps[7].text],
     "exp9": [exps[8].title, exps[8].text],
     "proj1": [projs[0].title, projs[0].text],
