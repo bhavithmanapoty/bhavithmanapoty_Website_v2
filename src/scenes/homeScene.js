@@ -60,6 +60,12 @@ export function homeScene(k) {
                                 // displayDialogue(dialogueData[boundary.name], () => (player.isInDialogue = false))
                             });
                         }
+                        else if (boundary.name === "credits"){
+                            player.onCollide(boundary.name, () => {
+                                player.isInDialogue = true;
+                                displayFullscreenDialogue(fullScreenDialogueData["credits"][0], fullScreenDialogueData["credits"][1], () => (player.isInDialogue = false))
+                            });
+                        }
                         else if (boundary.name !== "wall"){
                             player.onCollide(boundary.name, () => {
                                 player.isInDialogue = true;

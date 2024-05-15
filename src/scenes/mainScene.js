@@ -95,6 +95,8 @@ export function mainScene(k) {
                                 (map.pos.y + entity.y) * scaleFactor
                             );
                             k.add(player);
+                            player.isInDialogue = true;
+                            displayDialogue(dialogueData["game-open"], () => (player.isInDialogue = false))
                             continue;
                         }
                     }

@@ -26,6 +26,7 @@ export const projs = [
 export const generalData = [
     { title: "About Me", text: "Hi! My name is Bhavith Manapoty. I completed my undergraduate education from the University of Edinburgh, majoring in Artificial Intelligence and Computer Science. I am currently pursuing my Masters degree in Software Engineering for Embedded Systems at Carnegie Mellon University, Pittsburgh, USA. I am passionate about technology and I love to learn new things. I am a problem solver and I am always trying to find innovative solutions to any problem I see. I have a keen interest in the field of Internet of Things and I am looking for new and exciting opportunities. Feel free to contact me anytime!"},
     {title: "Contact Me", text: 'You can contact me through my social media accounts. I would be happy to hear from you! Here are my social media details.<br><a href="https://github.com/bhavithmanapoty" target="_blank"><img class="social-icon" src="./Github.png" alt="GitHub" width="32" height="32"></a><a href="https://www.linkedin.com/in/bhavith-manapoty-09bb131a6/" target="_blank"><img class="social-icon" src="./Linkedin.png" alt="LinkedIn" width="32" height="32"></a><a href="https://www.youtube.com/channel/UCiOXyIR3WWeTYuZJQJNLxAw" target="_blank"><img class="social-icon" src="./Youtube.png" alt="Youtube" width="32" height="32"></a>'},
+    {title: "Credits", text: "This game was built by Bhavith Manapoty using Kaboom.js"}
 ];
 
 
@@ -47,9 +48,11 @@ export const dialogueData = {
     "switch": "Ya-ha-ha! You found my Nintendo Switch! I play a lot of Zelda and Baba Is You on this.",
     "tv": "Wubba Lubba Dub Dub! This is my TV. I watch interdimensional cable on this.",
     "couch": "This is the couch that my friends crash on when they come over.",
-    "l2_sign": "Proceed downstairs to learn more about my projects!",
+    "l2_down_sign": "Proceed downstairs to learn more about my projects!",
     "enter-castle_l2": "You found the secret passage! Proceed to find out about my projects!",
-    "coin": "You found a coin! Find the wishing well to make a wish!"
+    "l1-sign": "Explore this floor to learn more about my experiences!",
+    "l2-sign": "Explore this floor to learn more about my personal projects!",
+    "game-open": "Welcome to my world. I am Bhavith Manapoty. You may explore around to learn more about me. Most objects you see in the game carry information about me. Signboards can give you hints on the information you might find."
 }
 
 export const fullScreenDialogueData = {
@@ -71,7 +74,8 @@ export const fullScreenDialogueData = {
     "proj7": [projs[6].title, projs[6].text],
     "proj8": [projs[7].title, projs[7].text],
     "aboutme": [generalData[0].title, generalData[0].text],
-    "contactme": [generalData[1].title, generalData[1].text]
+    "contactme": [generalData[1].title, generalData[1].text],
+    "credits": [generalData[2].title, generalData[2].text]
 }
 
 

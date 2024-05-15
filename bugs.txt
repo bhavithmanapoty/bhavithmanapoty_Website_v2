@@ -1,5 +1,3 @@
 BUGS TO FIX:
 - Fade transition
 - Social media links take too long
-- add sign for castle l1 and l2
-- make castle l1 statues/trophies instead of chests

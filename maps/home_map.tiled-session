@@ -12,14 +12,14 @@
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json": {
             "expandedObjectLayers": [
-                10,
-                9
+                9,
+                10
             ],
-            "scale": 2,
-            "selectedLayer": 8,
+            "scale": 4,
+            "selectedLayer": 9,
             "viewCenter": {
-                "x": 230,
-                "y": 159.75
+                "x": 195,
+                "y": 212.125
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json#0x72_DungeonTilesetII_v1.7": {
@@ -51,11 +51,11 @@
                 4,
                 5
             ],
-            "scale": 2,
-            "selectedLayer": 4,
+            "scale": 1.5,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 240,
-                "y": 160.25
+                "x": 275.3333333333333,
+                "y": 148.33333333333331
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#0x72_DungeonTilesetII_v1.7": {
@@ -66,6 +66,9 @@
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#Inner": {
             "scaleInDock": 1.5
+        },
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#Overworld": {
+            "scaleInDock": 1
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#atlas_floor-16x16": {
             "scaleInDock": 4
@@ -81,11 +84,11 @@
                 6,
                 5
             ],
-            "scale": 3,
-            "selectedLayer": 2,
+            "scale": 11,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 111.66666666666666,
-                "y": 109.83333333333334
+                "x": 158.9090909090909,
+                "y": 132.4090909090909
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json#Inner": {
@@ -101,18 +104,18 @@
             "scaleInDock": 1
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json#spritesheet": {
-            "scaleInDock": 3
+            "scaleInDock": 2
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json": {
             "expandedObjectLayers": [
-                17,
-                18
+                18,
+                17
             ],
-            "scale": 16,
+            "scale": 3,
             "selectedLayer": 11,
             "viewCenter": {
-                "x": 118.875,
-                "y": -0.96875
+                "x": 101.33333333333333,
+                "y": 47.16666666666666
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json#Inner": {
