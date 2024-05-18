@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json",
+    "activeFile": "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json",
     "expandedProjectPaths": [
     ],
     "fileStates": {
@@ -18,8 +18,8 @@
             "scale": 4,
             "selectedLayer": 9,
             "viewCenter": {
-                "x": 195,
-                "y": 212.125
+                "x": 235,
+                "y": 159.875
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json#0x72_DungeonTilesetII_v1.7": {
@@ -48,14 +48,14 @@
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json": {
             "expandedObjectLayers": [
-                4,
-                5
+                5,
+                4
             ],
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 275.3333333333333,
-                "y": 148.33333333333331
+                "x": 240,
+                "y": 160.33333333333331
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json#0x72_DungeonTilesetII_v1.7": {
@@ -84,11 +84,11 @@
                 6,
                 5
             ],
-            "scale": 11,
+            "scale": 3,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 158.9090909090909,
-                "y": 132.4090909090909
+                "x": 56.499999999999986,
+                "y": 66.83333333333334
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json#Inner": {
@@ -108,14 +108,14 @@
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json": {
             "expandedObjectLayers": [
-                18,
-                17
+                17,
+                18
             ],
-            "scale": 16,
+            "scale": 2,
             "selectedLayer": 11,
             "viewCenter": {
-                "x": 176.125,
-                "y": 254.90625
+                "x": 87.5,
+                "y": 155.75
             }
         },
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json#Inner": {
@@ -143,10 +143,10 @@
     ],
     "project": "home_map.tiled-project",
     "recentFiles": [
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json",
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l2.json",
         "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/castle_l1.json",
-        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json",
-        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/map.json"
+        "C:/Users/catch/OneDrive/Desktop/Projects/Portfolio Website/V2/public/home.json"
     ],
     "tileset.embedInMap": true,
     "tileset.tileSize": {

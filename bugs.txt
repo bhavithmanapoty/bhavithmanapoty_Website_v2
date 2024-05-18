@@ -1,3 +1,0 @@
-BUGS TO FIX:
-- Fade transition
-- Social media links take too long

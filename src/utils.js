@@ -10,9 +10,20 @@ export function displayDialogue(text, onDialogueEnd) {
     let currentText = '';
     const intervalRef = setInterval(() => {
         if (index < text.length) {
-            currentText += text[index];
+            const nextChar = text[index];
+            currentText += nextChar;
             dialogue.innerHTML = currentText;
             index++;
+
+            // If the next part of the text contains a link, insert it all at once
+            if (nextChar === '<') {
+                const linkEnd = text.indexOf('>', index);
+                if (linkEnd !== -1) {
+                    currentText += text.slice(index, linkEnd + 1);
+                    index = linkEnd + 1;
+                    dialogue.innerHTML = currentText;
+                }
+            }
             return;
         }
 
@@ -40,6 +51,7 @@ export function displayDialogue(text, onDialogueEnd) {
     closeBtn.addEventListener('click', onCloseBtnClick);
     document.addEventListener('keydown', onKeyDown);
 }
+
 
 export function displayFullscreenDialogue(title, text, onDialogueEnd) {
     const dialogueUI = document.getElementById('full-textbox-container');

@@ -201,7 +201,7 @@
                  "y":50.625
                 }, 
                 {
-                 "height":32.75,
+                 "height":31.875,
                  "id":9,
                  "name":"window",
                  "rotation":0,
@@ -212,7 +212,7 @@
                  "y":24.125
                 }, 
                 {
-                 "height":20.75,
+                 "height":20.125,
                  "id":11,
                  "name":"degree",
                  "rotation":0,
@@ -223,7 +223,7 @@
                  "y":35.875
                 }, 
                 {
-                 "height":45.5,
+                 "height":43.75,
                  "id":12,
                  "name":"bed",
                  "rotation":0,
@@ -256,7 +256,7 @@
                  "y":50.875
                 }, 
                 {
-                 "height":19.5,
+                 "height":18.875,
                  "id":15,
                  "name":"desktop",
                  "rotation":0,
@@ -333,18 +333,18 @@
                  "y":133.875
                 }, 
                 {
-                 "height":15.375,
+                 "height":14.5,
                  "id":23,
                  "name":"couch",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":27.625,
-                 "x":18.25,
-                 "y":95.125
+                 "width":26,
+                 "x":19,
+                 "y":96
                 }, 
                 {
-                 "height":10,
+                 "height":9.125,
                  "id":24,
                  "name":"wall",
                  "rotation":0,
@@ -427,9 +427,153 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":16,
-                 "x":160,
+                 "width":13,
+                 "x":163,
                  "y":142
+                }, 
+                {
+                 "height":16,
+                 "id":34,
+                 "name":"wall",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":5,
+                 "x":158,
+                 "y":142
+                }, 
+                {
+                 "height":16,
+                 "id":35,
+                 "name":"wall",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":3,
+                 "x":190,
+                 "y":142
+                },
+            
+                {
+                 "height":0,
+                 "id":36,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":177,
+                 "y":164
+                }, 
+                {
+                 "height":20,
+                 "id":37,
+                 "name":"wall",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":2,
+                 "x":128,
+                 "y":57
+                }, 
+                {
+                 "height":5,
+                 "id":38,
+                 "name":"wall",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":3,
+                 "x":140,
+                 "y":72
+                }, 
+                {
+                 "height":5,
+                 "id":42,
+                 "name":"wall",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":2,
+                 "x":161,
+                 "y":71
+                }, 
+                {
+                 "height":35,
+                 "id":43,
+                 "name":"wall",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":3,
+                 "x":110,
+                 "y":57
+                }, 
+                {
+                 "height":35,
+                 "id":44,
+                 "name":"wall",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":3,
+                 "x":79,
+                 "y":57
+                }, 
+                {
+                 "height":15,
+                 "id":45,
+                 "name":"wall",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":2,
+                 "x":45,
+                 "y":96
+                }, 
+                {
+                 "height":15,
+                 "id":46,
+                 "name":"wall",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":2,
+                 "x":17,
+                 "y":96
+                }, 
+                {
+                 "height":2,
+                 "id":47,
+                 "name":"wall",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":28,
+                 "x":18,
+                 "y":94
+                }, 
+                {
+                 "height":18,
+                 "id":49,
+                 "name":"wall",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":2,
+                 "x":46,
+                 "y":141
+                }, 
+                {
+                 "height":24,
+                 "id":50,
+                 "name":"wall",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":2,
+                 "x":16,
+                 "y":134
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -438,7 +582,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":34,
+ "nextobjectid":51,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
