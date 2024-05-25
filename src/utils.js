@@ -3,6 +3,7 @@ import { fullScreenDialogueData, exps, projs } from './constants.js';
 export function displayDialogue(text, onDialogueEnd) {
     const dialogueUI = document.getElementById('textbox-container');
     const dialogue = document.getElementById('dialogue');
+    const textbox = document.getElementById('textbox');
 
     dialogueUI.style.display = 'block';
 
@@ -48,8 +49,15 @@ export function displayDialogue(text, onDialogueEnd) {
         }
     }
 
+    function onTouchStart(event) {
+        if (!textbox.contains(event.target)) {
+            onCloseBtnClick();
+        }
+    }
+
     closeBtn.addEventListener('click', onCloseBtnClick);
     document.addEventListener('keydown', onKeyDown);
+    document.addEventListener('touchstart', onTouchStart);
 }
 
 
