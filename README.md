@@ -52,8 +52,6 @@ This game was built by Bhavith Manapoty using Kaboom.js. Assets for this game ca
 - [FreeCodeCamp Spritesheet](https://github.com/JSLegendDev/2d-portfolio-kaboom/blob/master/public/spritesheet.png)
 - [History Book Icons](https://www.flaticon.com/free-icons/history-book)
 
-BPM data for my music-reactive lighting project is provided by [GetSongBPM.com](https://getsongbpm.com/).
-
 ## License
 
 Distributed under the MIT License
